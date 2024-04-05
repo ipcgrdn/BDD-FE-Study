@@ -81,6 +81,3 @@ function Detail () {
 }
 
 export default Detail;
-
-// 마찬가지로 타입 추론 불가능한 점 고쳐야 함.
-// movie.genres 한 번씩 오류 발생함.
