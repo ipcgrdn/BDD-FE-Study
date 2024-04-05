@@ -56,9 +56,6 @@ function Detail () {
              <h1 className="text-3xl font-extrabold py-3"> {movie.title} </h1>
              <p> Year: {movie.year} </p>
              <p> Rating: {movie.rating} </p>
-             <p> Genres: {movie.genres.map((g: any) => (
-              <li key={g}>{g}</li>
-             ))}</p>
             </div>
 
           </div>
