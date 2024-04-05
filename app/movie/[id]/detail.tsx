@@ -62,7 +62,7 @@ function Detail () {
 
           <div>
 
-            <hr className="border-t border-black/25 my-10"/>
+            <hr className="border-t border-black/25 my-16 md:my-10"/>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 h-full w-full">
             {movies.map((movie) => (
