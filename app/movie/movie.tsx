@@ -15,6 +15,7 @@ function Movie ({ id, coverImg, title, year, summary, genres }: MovieProps) {
     <div className={styles.movie}>
       <img src={coverImg} alt={title} className={styles.movie__img} />
       <Link href={`/movie/${id}`} >
+        <div className="hidden md:flex flex-col">
         <h2 className={styles.movie__title}>
           {title}
         </h2>
@@ -25,6 +26,7 @@ function Movie ({ id, coverImg, title, year, summary, genres }: MovieProps) {
             <li key={g}>{g}</li>
           ))}
         </ul>
+        </div>
       </Link>
     </div>
   );

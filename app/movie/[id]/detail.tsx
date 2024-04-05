@@ -57,7 +57,7 @@ function Detail () {
              <p> Year: {movie.year} </p>
              <p> Rating: {movie.rating} </p>
              <p> Genres: {movie.genres.map((g: any) => (
-              <p key={movie.id}> {g} </p>
+              <li key={g}>{g}</li>
              ))}</p>
             </div>
 
