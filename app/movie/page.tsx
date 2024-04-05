@@ -29,7 +29,7 @@ function Moviepage () {
           <Loader />
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-4 p-12 w-9/12 pt-16 overflow-x-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-12 w-9/12 pt-16 overflow-hidden">
           {movies.map((movie) => (
             <Movie
               key={movie.id}

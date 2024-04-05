@@ -46,17 +46,19 @@ function Detail () {
       ) : (
         <div className="h-full w-3/4 flex flex-col gap-y-4 overflow-y-scroll mt-10">
           
-          <div className="h-full w-full flex gap-x-4 items-center justify-center">
+          <div className="h-full w-full flex flex-col space-y-6 md:flex-row gap-x-4 items-center justify-center">
 
             <img src={movie.medium_cover_image} alt="img" width={300} height={300} className="shadow-xl rounded-lg"/>
 
-            <div className="ml-10 border border-black/15 shadow-lg p-8">
+            <div className="md:ml-10 border border-black/15 shadow-lg p-8">
             <Home width={25} height={25} onClick={() => router.push('/movie')} />
             <br />
              <h1 className="text-3xl font-extrabold py-3"> {movie.title} </h1>
              <p> Year: {movie.year} </p>
              <p> Rating: {movie.rating} </p>
-             <p> Genres: {movie.genres[0]}</p>
+             <p> Genres: {movie.genres.map((g: any) => (
+              <p key={movie.id}> {g} </p>
+             ))}</p>
             </div>
 
           </div>
@@ -65,7 +67,7 @@ function Detail () {
 
             <hr className="border-t border-black/25 my-10"/>
 
-            <div className="grid grid-cols-4 gap-x-4 h-full w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 h-full w-full">
             {movies.map((movie) => (
               <Link href={`/movie/${movie.id}`} key={movie.id}>
                 <img src={movie.medium_cover_image} alt="image" />

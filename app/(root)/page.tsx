@@ -11,7 +11,7 @@ const RootPage = () => {
   }
 
   return ( 
-    <div className="h-full w-full flex items-center justify-center">
+    <div className="h-full w-full flex flex-col md:flex-row items-center justify-center">
       <Image src="/movie.svg" alt="movie" width={500} height={500} />
         <div className="flex flex-col gap-y-2">
           <p className="text-4xl font-extrabold"> Welcome! </p>
