@@ -67,7 +67,7 @@ function Detail () {
 
             <div className="grid grid-cols-4 gap-x-4 h-full w-full">
             {movies.map((movie) => (
-              <Link href={`/movie/${movie.id}`}>
+              <Link href={`/movie/${movie.id}`} key={movie.id}>
                 <img src={movie.medium_cover_image} alt="image" />
               </Link>
           ))}
