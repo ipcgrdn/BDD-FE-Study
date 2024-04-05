@@ -7,8 +7,8 @@ import Link from "next/link";
 
 function Detail () {
   const [loading, setLoading] = useState(true);
-  const [movie, setMovie] = useState([]);
-  const [movies, setMovies] = useState([]);
+  const [movie, setMovie] = useState<any[] | any>([]);
+  const [movies, setMovies] = useState<any[]>([]);
 
   const { id } = useParams();
 

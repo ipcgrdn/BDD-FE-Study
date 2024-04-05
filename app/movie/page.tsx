@@ -6,7 +6,7 @@ import Movie from "./movie";
 
 function Moviepage () {
   const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<any[]>([]);
   
   const getMovies = async () => {
     const json = await (
